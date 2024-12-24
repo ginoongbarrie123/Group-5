@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click to Slide Content with Videos</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .slider .slide {
+      display: none;
+    }
+    .slider .slide.active {
+      display: block;
+    }
+    .buttons {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .buttons button:hover {
+      background: rgba(255, 255, 255, 0.7);
+      color: black;
+    }
+    p {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Video Elements -->
+    <video id="video1" autoplay loop muted>
+      <source src="/VIDEO/angat watershed vid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video2" autoplay loop muted style="display: none;">
+      <source src="/VIDEO/daraitan vid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video3" autoplay loop muted style="display: none;">
+      <source src="/VIDEO/video3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video4" autoplay loop muted style="display: none;">
+      <source src="/VIDEO/video3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video5" autoplay loop muted style="display: none;">
+      <source src="/VIDEO/video3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video6" autoplay loop muted style="display: none;">
+      <source src="/VIDEO/video3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video7" autoplay loop muted style="display: none;">
+      <source src="/VIDEO/video3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="video8" autoplay loop muted style="display: none;">
+      <source src="/VIDEO/video3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+
+    <!-- Slides -->
+    <div class="slider">
+      <div class="slide active">
+        <h3><b>1. Ditumabo Falls (Aurora)<br></b></h3>
+          <p>Also known as the "Mother Falls," Ditumabo Falls is a majestic waterfall located in San Luis, Aurora, near Baler. It features a powerful cascade of cool, clear water surrounded by lush greenery and towering rock formations. The falls are reached after a scenic 45-minute trek through forests, small streams, and boulders.</p>
+         
+        <h3><b>How to go to this tourist spot?</b><br></h3>
+          <p>From Manila: Take a bus bound for Baler (Genesis or JoyBus) at Cubao or Pasay terminals (6-7 hours). From Baler town proper, hire a tricycle to take you to the jump-off point of Ditumabo Falls in Barangay Ditumabo, San Luis (about 30 minutes). You’ll need to trek for around 45 minutes to reach the falls.</p>
+        </div>
+
+      <div class="slide">
+          <h3><b>2. Angat Watershed (Bulacan)<br></b></h3>
+          <p>The Angat Watershed is a protected area that supplies water to Metro Manila and irrigates farmlands in Bulacan and Pampanga. It is also the site of Angat Dam, a major water reservoir. The watershed is home to diverse wildlife and dense forests, making it an important ecological zone.</p>
+     
+      <h3><b>How to go to this tourist spot?</b><br></h3>
+          <p>From Manila: Take a bus bound for Norzagaray, Bulacan from Cubao or Monumento (2 hours). Upon reaching Norzagaray, hire a tricycle or a jeepney to take you to Angat Dam and the watershed area, which is within the Ipo Watershed Reserve. Be sure to arrange permits and guides beforehand.</p>
+      </div>
+
+
+      <div class="slide">
+        <h3><b>3. Dingalan Bay (Aurora)<br></b></h3>
+        <p>Dingalan Bay is located on the eastern coast of Luzon, in Aurora Province. Known for its rugged cliffs, scenic beaches, and breathtaking views of the Pacific Ocean, Dingalan is often referred to as the "Batanes of the East." Popular activities include hiking to the lighthouse, exploring white-sand beaches, and boat rides around the bay.</p>
+     
+        <h3><b>How to go to this tourist spot?</b><br></h3>
+        <p>From Manila: Take a bus bound for Cabanatuan (3-4 hours). From Cabanatuan City terminal, transfer to a van or bus going to Dingalan (2-3 hours). Once in Dingalan town proper, you can take a tricycle or a boat to various scenic spots around Dingalan Bay.</p>
+      </div>
+
+      <div class="slide">
+      <h3><b>4. Mount Daraitan (Rizal)<br></b></h3>
+        <p>Mount Daraitan is a popular hiking destination in Tanay, Rizal, offering panoramic views of the Sierra Madre mountain range and the Tinipak River. The mountain is known for its limestone formations, caves, and clear river pools. The climb is moderately challenging, attracting nature lovers and adventurers looking for a quick escape from the city.</p>
+       
+        <h3><b>How to go to this tourist spot?</b><br></h3>
+        <p>From Manila: Ride a jeepney or UV Express from Cubao or Shaw Boulevard to Tanay Public Market (1-2 hours). From there, hire a tricycle to the Barangay Daraitan jump-off point (about 1 hour). You’ll cross a short river via bamboo raft before starting the trek up the mountain.</p>
+      </div>
+
+      <div class="slide">
+        <h3><b>5. Minalungao National Park (Nueva Ecija)<br></b></h3>
+        <p>Minalungao National Park is a protected area in General Tinio, Nueva Ecija, known for its emerald-colored river flanked by towering limestone walls. The park offers activities like bamboo rafting, swimming, hiking, and spelunking in its cave systems, making it a popular destination for nature lovers and adventurers.</p>
+    
+        <h3><b>How to go to this tourist spot?</b><br></h3>
+        <p>From Manila: Take a bus to Gapan or Cabanatuan (3-4 hours). From Gapan, take a jeepney or tricycle going to General Tinio. From General Tinio town proper, hire a tricycle to Minalungao National Park (around 30-45 minutes).</p>
+      </div>
+
+      <div class="slide">
+      <h3><b>6. Daranak Falls (Rizal)<br></b></h3>
+        <p>Daranak Falls is a beautiful waterfall located in Tanay, Rizal. It cascades into a large basin surrounded by lush greenery, making it a great spot for swimming and picnicking. Easily accessible from the road, it is one of the most popular nature spots in the region, perfect for family outings and relaxation.</p> 
+      
+    <h3><b> How to go to this tourist spot?</b><br></h3> 
+      <p>From Manila: Take a jeepney or van from Cubao or Shaw Boulevard to Tanay Public Market (1-2 hours). From Tanay market, take a tricycle to Daranak Falls (around 30 minutes). The falls are easily accessible from the road.</p>  
+      
+      <div class="slide"> 
+      <h3><b>7. Masungi Georeserve (Rizal)<br></b></h3> 
+        Masungi Georeserve is a conservation area located in Baras, Rizal, dedicated to preserving limestone formations and rich biodiversity. Visitors can experience its eco-trail featuring hanging bridges, rope courses, and scenic views of the Sierra Madre forest. It’s known for its commitment to environmental conservation and sustainable tourism. 
+     
+    <h3><b> How to go to this tourist spot?</b><br></h3> 
+        <p> From Manila: Take a private vehicle or book a van heading toward Tanay via Marcos Highway (1-2 hours). The Masungi Georeserve entrance is along Kilometer 47 of Marcos Highway, accessible by car or hired transport. Pre-arranged tours are required.</p>  
+
+
+        <div class="slide">
+        <h3><b>8. Casapsapan Beach (Aurora)<br></b></h1> 
+          <p> Casapsapan Beach is a remote, pristine white-sand beach located in Casiguran, Aurora. Known for its crystal-clear waters and peaceful environment, the beach is ideal for those seeking solitude and relaxation away from the usual tourist spots. Its natural beauty and less-crowded atmosphere make it a hidden gem in the region.  </p>
+          
+      <h3><b> How to go to this tourist spot?</b><br></h3> 
+     <p>From Manila: Take a bus bound for Baler (Genesis or JoyBus, 6-7 hours). From Baler, take another bus or van going to Casiguran (3-4 hours). From Casiguran town proper, hire a tricycle or boat to reach Casapsapan Beach (30-45 minutes). This area is more remote, so plan accordingly.</p>  
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="buttons">
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const videos = document.querySelectorAll('video');
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+      videos.forEach((video, i) => {
+        video.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
+    nextBtn.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    // Initialize the first slide and video as active
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click to Slide Content with Videos</title>
+<style>
+    body, html {
+        margin: 100px;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        height: 100%;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Hide overflowing video */
+        margin: 100px auto;
+    }
+
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: 100px;
+        height: auto;
+        z-index: -1; /* Send video to the background */
+        object-fit: cover; /* Ensure the video covers the entire container */
+        display: none; /* Hide videos initially */
+    }
+
+    video.active {
+        display: block; /* Show active video */
+    }
+
+    .slider {
+        position: relative;
+        z-index: 1; /* Ensure content is above the video */
+        text-align: center;
+        max-width: 800px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+        border-radius: 10px;
+    }
+
+    .slider .slide {
+        display: none;
+    }
+
+    .slider .slide.active {
+        display: block;
+    }
+
+    .buttons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .buttons button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .buttons button:hover {
+        background: #0056b3;
+    }
+
+    .dots {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #ccc;
+        transition: background-color 0.3s;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background-color: #007bff;
+    }
+
+    p {
+        color: #a8d0e6;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .slider {
+            width: 95%;
+            padding: 15px;
+        }
+        h3 {
+            font-size: 1.2rem;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+        .buttons button {
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <!-- Video Elements -->
+        <video id="video1" autoplay loop muted>
+            <source src="/VIDEO/angat watershed vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video id="video2" autoplay loop muted>
+            <source src="/VIDEO/daraitan vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video id="video3" autoplay loop muted>
+            <source src="/VIDEO/daranak_vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Slides -->
+        <div class="slider">
+            <div class="slide active">
+                <h3><b>1. Ditumabo Falls (Aurora)<br></b></h3>
+                  <p>Also known as the "Mother Falls," Ditumabo Falls is a majestic waterfall located in San Luis, Aurora, near Baler. It features a powerful cascade of cool, clear water surrounded by lush greenery and towering rock formations. The falls are reached after a scenic 45-minute trek through forests, small streams, and boulders.</p>
+                 
+                <h3><b>How to go to this tourist spot?</b><br></h3>
+                  <p>From Manila: Take a bus bound for Baler (Genesis or JoyBus) at Cubao or Pasay terminals (6-7 hours). From Baler town proper, hire a tricycle to take you to the jump-off point of Ditumabo Falls in Barangay Ditumabo, San Luis (about 30 minutes). You’ll need to trek for around 45 minutes to reach the falls.</p>
+                </div>
+        
+              <div class="slide">
+                  <h3><b>2. Angat Watershed (Bulacan)<br></b></h3>
+                  <p>The Angat Watershed is a protected area that supplies water to Metro Manila and irrigates farmlands in Bulacan and Pampanga. It is also the site of Angat Dam, a major water reservoir. The watershed is home to diverse wildlife and dense forests, making it an important ecological zone.</p>
+             
+              <h3><b>How to go to this tourist spot?</b><br></h3>
+                  <p>From Manila: Take a bus bound for Norzagaray, Bulacan from Cubao or Monumento (2 hours). Upon reaching Norzagaray, hire a tricycle or a jeepney to take you to Angat Dam and the watershed area, which is within the Ipo Watershed Reserve. Be sure to arrange permits and guides beforehand.</p>
+              </div>
+        
+        
+              <div class="slide">
+                <h3><b>3. Dingalan Bay (Aurora)<br></b></h3>
+                <p>Dingalan Bay is located on the eastern coast of Luzon, in Aurora Province. Known for its rugged cliffs, scenic beaches, and breathtaking views of the Pacific Ocean, Dingalan is often referred to as the "Batanes of the East." Popular activities include hiking to the lighthouse, exploring white-sand beaches, and boat rides around the bay.</p>
+             
+                <h3><b>How to go to this tourist spot?</b><br></h3>
+                <p>From Manila: Take a bus bound for Cabanatuan (3-4 hours). From Cabanatuan City terminal, transfer to a van or bus going to Dingalan (2-3 hours). Once in Dingalan town proper, you can take a tricycle or a boat to various scenic spots around Dingalan Bay.</p>
+              </div>
+        </div>
+
+        <!-- Dots Navigation -->
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>    
+
+        <!-- Navigation Buttons -->
+        <div class="buttons">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const videos = document.querySelectorAll('video');
+        const nextBtn = document.getElementById('next');
+        const prevBtn = document.getElementById('prev');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            videos.forEach((video, i) => {
+                video.classList.toggle('active', i === index);
+                if (i === index) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        // Initialize the first slide and video as active
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
